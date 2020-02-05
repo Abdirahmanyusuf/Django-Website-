@@ -1,0 +1,20 @@
+#header {
+ height:50px;
+ background:#10284e;
+ color:#fff;
+
+}
+div.breadcrumbs {
+background:#30caa0;
+}
+.module caption, .inline-group h2 {
+ background:#30caa0;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button{
+ background:#30caa0;
+
+}
+.submit-row input.default{
+ background:#30caa0;
+
+}

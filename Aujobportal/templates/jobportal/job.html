@@ -1,0 +1,70 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Jobs </title>
+</head>
+<body>
+<div class="row">
+    <div class="col">
+        <div class="card card-body">
+            <form method="get">
+                
+                {{filter.form}}
+                <button type="submit" class="btn btn-primary">search</button>
+            </form>
+            <ul>
+                
+        </div>
+    </div>
+    </div>
+
+</div>
+<div class="table-responsive.{-sm|-md|-lg|-xl}">
+    <table class="table table-bordered ">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Position</th>
+            <th scope="col">Department</th>
+            <th scope="col">Location</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Days</th>
+            <th scope="col">English</th>
+            <th scope="col">France</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in jobRegisters %}
+        <tr>
+            <td>{{i.position}}</td>
+            <td>{{i.Department}}</td>
+            <td>{{i.Location}}</td>
+            <td>{{i.Deadline}}</td>
+            <td>{{i.Days}}</td>
+            <td><a class="btn btn-primary  btn-sm btn-block" href="">View</a></td>
+            <td><a class="btn btn-primary  btn-sm btn-block" href="">View</a></td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="alert alert-warning" role="alert">
+    If you are experiencing problems during either applying for a job or creating a PHP record in the E-recruitment
+    System, please contact the African Union Recruitment by logging a ticket through the link below.
+
+</div>
+<span>African Union Commision does not charge a fee at any stage of the recruitment process if you are requested to send any form of money in regards to a job advert please <strong> au-recruits@africa-union.org</strong>.</span>
+<P>All applications should be made through our E-recruitment system, any application channeled through other means will
+    not be considered.
+
+
+    If you are experiencing problems during either applying for a job or creating a PHF record in the E-recruitment
+    System, please contact the African Union Recruitment at au-recruits@africa-union.org and elaborate on the exact
+    problem you are facing.</P>
+</body>
+</html>
+{% endblock %}

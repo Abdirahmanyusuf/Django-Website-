@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Current Vacancies at African Union Commision
+</a><img src="{% static 'images/logo.png' %}" height="70" width="70" text-center> </h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block extrastyle %}
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/admin.css' %}">
+
+
+{% endblock %}
